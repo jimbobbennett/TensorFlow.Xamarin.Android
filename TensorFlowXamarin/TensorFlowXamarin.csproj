@@ -24,6 +24,7 @@
     <PackageTags>Xamarin Android Tensorflow</PackageTags>
     <Title>Xamarin bindings for Tensorflow Mobile</Title>
     <Description>Xamarin bindings for the Android Tensorflow Mobile libraries</Description>
+    <PackageIconUrl>https://raw.githubusercontent.com/jimbobbennett/TensorFlow.Xamarin.Android/master/Tensorflow_logo.png</PackageIconUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
