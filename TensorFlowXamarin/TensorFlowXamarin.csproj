@@ -16,15 +16,18 @@
     <AndroidClassParser>class-parse</AndroidClassParser>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>Xam.Android.Tensorflow</PackageId>
-    <PackageVersion>1.0</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <Authors>Larry O'Brien</Authors>
     <PackageLicenseUrl>https://github.com/lobrien/TensorFlow.Xamarin.Android/blob/master/LICENSE</PackageLicenseUrl>
-    <Owners>Larry O'Brien</Owners>
+    <Owners>Larry O'Brien, Jim Bennett</Owners>
     <PackageProjectUrl>https://github.com/lobrien/TensorFlow.Xamarin.Android</PackageProjectUrl>
     <PackageTags>Xamarin Android Tensorflow</PackageTags>
-    <Title>Xamarin bindings for Tensorflow Mobile</Title>
+    <Title>Xamarin bindings for Tensorflow.Mobile</Title>
     <Description>Xamarin bindings for the Android Tensorflow Mobile libraries</Description>
     <PackageIconUrl>https://raw.githubusercontent.com/jimbobbennett/TensorFlow.Xamarin.Android/master/Tensorflow_logo.png</PackageIconUrl>
+    <PackageReleaseNotes>See the Tensorflow.mobile release notes here:
+
+http://ci.tensorflow.org/view/Nightly/job/nightly-android/478/</PackageReleaseNotes>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
