@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.props" Condition="Exists('packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -8,11 +9,21 @@
     <OutputType>Library</OutputType>
     <RootNamespace>TensorFlowXamarin</RootNamespace>
     <AssemblyName>TensorFlowXamarin</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <AndroidClassParser>class-parse</AndroidClassParser>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>Xam.Android.Tensorflow</PackageId>
+    <PackageVersion>1.0</PackageVersion>
+    <Authors>Larry O'Brien</Authors>
+    <PackageLicenseUrl>https://github.com/lobrien/TensorFlow.Xamarin.Android/blob/master/LICENSE</PackageLicenseUrl>
+    <Owners>Larry O'Brien</Owners>
+    <PackageProjectUrl>https://github.com/lobrien/TensorFlow.Xamarin.Android</PackageProjectUrl>
+    <PackageTags>Xamarin Android Tensorflow</PackageTags>
+    <Title>Xamarin bindings for Tensorflow Mobile</Title>
+    <Description>Xamarin bindings for the Android Tensorflow Mobile libraries</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +57,7 @@
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />
     <None Include="Jars\AboutJars.txt" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
@@ -65,4 +77,5 @@
     <EmbeddedNativeLibrary Include="Jars\libtensorflow_inference.so\x86_64\libtensorflow_inference.so" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+  <Import Project="packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets" Condition="Exists('packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets')" />
 </Project>
